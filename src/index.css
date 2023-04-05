@@ -9,6 +9,53 @@ a {
   color: #fff;
 }
 
+/* HEADER */
+
+header {
+  padding-top: 64px;
+  margin-bottom: 35px;
+  width: 100%;
+  font-family: 'Roboto', sans-serif;
+  position: relative;
+}
+
+header h1 {
+  font-size: 24px;
+  color: #ffff;
+  margin-left: 20px;
+  opacity: 0.4;
+  cursor: pointer;
+}
+
+header p {
+  font-size: 11px;
+  color: #ffff;
+  margin-left: 20px;
+  opacity: 0.4;
+  cursor: pointer;
+}
+
+header .author {
+  position: relative;
+  margin-top: 58px;
+  height: 48px;
+}
+
+header .author img {
+  height: 48px;
+  border-radius: 50%;
+}
+
+header .author .user {
+  position: absolute;
+  top: 50%;
+  left: 65px;
+  transform: translateY(-50%);
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* body */
 body {
   position: relative;
   background-color: #000;
@@ -16,7 +63,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  font-family: 'Libre Baskerville', serif;
+  /* font-family: 'Libre Baskerville', serif; */
 }
 
 .addTag {
@@ -26,13 +73,13 @@ body {
   height: 120px;
   text-align: center;
   font-size: 72px;
-  font-style: italic;
+  /* font-style: ; */
   padding: 0 30px;
   font-weight: 700;
   background: transparent;
   color: #fff;
   text-shadow: 0 1px 6px rgba(0,0,0,0.5);
-  font-family: 'Kalam', cursive;
+  font-family: Arial, Helvetica, sans-serif, cursive;
 }  
 
 input.addTag::placeholder {
@@ -94,43 +141,65 @@ input.addTag::-webkit-input-placeholder {
 }
 
 .tag:hover {
+  color: #fff;
+  opacity: 0.8;
   transform: translateY(-5px);
   -webkit-transform: translateY(-5px);
   -moz-transform: translateY(-5px);
   -ms-transform: translateY(-5px);
   -o-transform: translateY(-5px);
-  background-color: rgba(255, 221, 28, 0.7);
+  background-color: rgba(112, 215, 148, 0.7);
 }
 
-.slideshow {
-  width: 500px;
-  height: 400px;
+.images{
+   z-index: 3;
+   /* position: absolute; */
+}
+
+/* 추가 이미지 */
+img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  margin-left: 1600px;
+  
+  
+}
+
+/* .bgc {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: 800px;
+  max-width: 200px; 
+  margin-left: 1600px; 
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #f2f2f2; 
   overflow: hidden;
-}
-
-.slide {
+  z-index: -1;
   position: relative;
-  width: 500px;
-  height: 400px;
-  transition: transform 0.5s;
+} */
+
+.images :hover{
+  color: #fff;
+  transform: translateY(-5px);
+  -webkit-transform: translateY(-5px);
+  -moz-transform: translateY(-5px);
+  -ms-transform: translateY(-5px);
+  -o-transform: translateY(-5px);
 }
 
-.slide img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+
+/* 이미지를 담을 div 크기 지정 */
+#cart {
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.slide .next-slide {
-  transform: translateX(100%);
-}
-
-.slide.active {
-  transform: translateX(-100%);
-}
-
-.slide.active .next-slide {
-  transform: translateX(0);
+/* 이미지 간 간격 지정 */
+#cart div {
+  margin: 10px;
+  margin-right: 20px;
 }

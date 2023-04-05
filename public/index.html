@@ -9,38 +9,72 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../src/index.css">
   <script defer src="App.js"></script>
-  
+
+
+
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
   <link rel="icon" href="img/favicon.ico" type="image/x-icon">
   <title>What is your tag?</title>
+
 </head>
 
-<body>
-  <section class="container">
-    <input type="text" class="addTag" value="" placeholder="what is your tag?" spellcheck="false">
-    <section class="container__tag">
-      <article class="tag" data-keyword="nature">
-          #nature
-      </article>
-      <article class="tag" data-keyword="motorcycle">
-          #motorcycle
-      </article>
-      <article class="tag" data-keyword="design">
-          #design
-      </article>
-      <article class="tag" data-keyword="newyork">
-          #newyork
-      </article>
-      <article class="tag" data-keyword="journey">
-          #journey
-      </article>
-      <article class="tag" data-keyword="photography">
-          #photography
-      </article>
+
+  <section class="wrapper">
+    <article class="contents">
+      <header>
+          <div>
+            <a href="https://github.com/YoonJoowon" target="_blank">
+              <h1>TEAM 아이티</h1>
+              <p>태그 활용 썸네일 메이커 1.0</p>
+            </a>
+          </div>
+      </header>
     </section>
-  </section>
-</body>
+
+  <body>
+    
+  
+      <section class="container">
+        <input type="text" class="addTag"  placeholder="what is your tag?" >
+        <section class="container_tag">
+          <!-- container__tag 이거랑 addEventListner랑 관련 있음  -->
+          <article class="tag" data-keyword="talent">
+              #주원
+          </article>
+        </section>
+      </section>
+
+     
+
+      <!-- <div class="images">
+        <img class="image1" src="image1.jpg" onclick="changeBackground()">
+        <img class="image2" src="image2.jpg" onclick="changeBackground()">
+        <img class="image3" src="image3.jpg" onclick="changeBackground()">
+        <img class="image4" src="image4.jpg" onclick="changeBackground()">
+        <img class="image5" src="image5.jpg" onclick="changeBackground()">
+      </div> -->
+
+       
+      <div class="images">
+        <img class="image1" onclick="changeBackground(this)">
+        <img class="image2" onclick="changeBackground(this)">
+        <img class="image3" onclick="changeBackground(this)">
+        <img class="image4" onclick="changeBackground(this)">
+        <img class="image5" onclick="changeBackground(this)">
+      </div>
+<!-- 
+       <div class="bgc"></div> -->
+        
+      <!-- <div id='root'></div> -->
+  </body>
+  
+  <script>
+    function changeBackground(imageElement) {
+      const imageUrl = imageElement.src;
+      document.body.style.backgroundImage = `url(${imageUrl})`;
+  }
+  </script>
 
 </html>
